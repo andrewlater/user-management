@@ -1,0 +1,38 @@
+﻿@model UserManagement.Web.Models.UserViewModel
+
+<div class="table-responsive panel">
+    <table class="table">
+        <tbody>
+            <tr>
+                <td>@Html.DisplayNameFor(m => m.User.Username)</td>
+                <td>@Html.DisplayFor(m => m.User.Username)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(m => m.User.FirstName)</td>
+                <td>@Html.DisplayFor(m => m.User.FirstName)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(m => m.User.LastName)</td>
+                <td>@Html.DisplayFor(m => m.User.LastName)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(m => m.User.UserRoles)</td>
+                <td>@Html.DisplayFor(m => m.User.UserRoles, "UserRoles")</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(m => m.User.CreateDate)</td>
+                <td>@Html.DisplayFor(m => m.User.CreateDate)</td>
+            </tr>
+            <tr>
+                <td>@Html.DisplayNameFor(m => m.User.LastUpdateDate)</td>
+                <td>@Html.DisplayFor(m => m.User.LastUpdateDate)</td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <a asp-action="Edit" asp-route-id="@Model.User.UserId">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@Model.User.UserId">Delete</a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
